@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Web Dev Custom Template Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="outerdiv">
+		<div class="maindiv">
+			<div class="inputbox">
+				<h2>Create Custom Web Template</h2>
+				<p>This page is made by <b>Developer Sah</b>.I face a lot of problem while creating a new web project .I wanted a custom boiler plate for my project.This page solves my lot of problem.I get a lot of option like meta viewport , fontswsome , bootstrap , animate google font , my social links , footer , jquery starting code</p>
+				<div class="choicebox">
+					<div class="eachlanginput animate__animated animate__fadeIn animate__delay-1s">
+						<h3 class="html">HTML</h3>
+						<div class="eachchoice">
+							<input type="checkbox" id="utf" onchange="generate()" checked>
+							<span>UTF</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="meta_width" onchange="generate()" checked>
+							<span>Meta Width</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="bootstrap_css" onchange="generate()">
+							<span>Bootstrap CSS</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="font_awesome" onchange="generate()">
+							<span>Font Awsome</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="animate" onchange="generate()">
+							<span>Animate</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="google_font" onchange="generate()">
+							<span>Google Font (Roboto)</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="title" onchange="generate()">
+							<span>Title</span>
+							<input type="text" id="title_name" placeholder="Enter the title" oninput="titleset()">
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="social_links" onchange="generate()">
+							<span>Social Link</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="footer" onchange="generate()">
+							<span>Footer</span>
+						</div>
+					</div>
+
+					<div class="eachlanginput animate__animated animate__fadeIn animate__delay-2s">
+						<h3 class="css">CSS</h3>
+						<div class="eachchoice">
+							<input type="checkbox" id="css_link" onchange="generate()" checked>
+							<span>CSS Stylesheet</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="css_reset" onchange="generate()" checked>
+							<span>CSS Reset</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="media_query" onchange="generate()">
+							<span>Media Query</span>
+						</div>
+					</div>
+
+					<div class="eachlanginput animate__animated animate__fadeIn animate__delay-3s">
+						<h3 class="js">JS</h3>
+						<div class="eachchoice">
+							<input type="checkbox" id="link_js" onchange="generate()" checked>
+							<span>Script.js</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="jquery"  onchange="generate()">
+							<span>Jquery</span>
+						</div>
+						<div class="eachchoice">
+							<input type="checkbox" id="bootstrap_js" onchange="generate()">
+							<span>Bootstrap JS</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="outputbox">
+				<div class="langbox">
+					<div class="topline">
+						<h3 class="html">HTML</h3>
+						<button class="animate__animated" onclick="copytext(this,'html')"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+					</div>
+					<textarea class="outputcode" name="" id="htmlcode" spellcheck="false"></textarea>
+				</div>
+				<div class="langbox">
+					<div class="topline">
+						<h3 class="css">CSS</h3>
+						<button class="animate__animated" onclick="copytext(this,'css')"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+					</div>
+					<textarea class="outputcode" name="" id="csscode" spellcheck="false"></textarea>
+				</div>
+				<div class="langbox">
+					<div class="topline">
+						<h3 class="js">JS</h3>
+						<button class="animate__animated" onclick="copytext(this,'js')"><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+					</div>
+					<textarea class="outputcode" name="" id="jscode" spellcheck="false"></textarea>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<textarea id="copypastbox"></textarea>
+  	<div class="links">
+      <ul>
+        <li><a target="_blank" href="https://github.com/RahulSahOfficial"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/developer_sah/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a target="_blank" href="https://twitter.com/developer_sah"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer">
+      <p>© Copyright <span id="year">2021</span> &nbsp;&nbsp;|&nbsp;&nbsp; Created By Rahul Sah 🇮🇳</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
