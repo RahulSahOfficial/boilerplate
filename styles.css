@@ -59,6 +59,13 @@ body
     font-size: 1.5rem;
     font-weight: 600;
 }
+#tagline
+{
+	font-size: 1.2rem;
+    font-weight: 600;
+    color: #F44336;
+    margin: 0.2rem 0 1.5rem;
+}
 .inputbox p
 {
 	margin: 0;
@@ -225,5 +232,21 @@ body
 	.maindiv
 	{
 		flex-direction: column;
+	}
+	.inputbox, .outputbox {
+		width: 20rem;
+	}
+	.eachchoice input[type=text]{
+		width: 14rem;
+    	margin: 0 0.5rem;
+	}
+	.langbox {
+    	padding: 0;
+	}
+	.inputbox {
+    	padding: 0;
+	}	
+	.eachchoice {
+    	margin: 0.5rem 0rem;
 	}
 }
